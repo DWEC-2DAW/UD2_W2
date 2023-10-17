@@ -45,8 +45,9 @@ let listaServidores=[ "terra.es" , "myspace.com", "arrakis.es", "tuenti.es"]; --
                 let result2= document.getElementById("result2")
 
 
-                let validate = new RegExp("[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$");
-       /*          https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions */
+                let validate = new RegExp("[a-z0-9._%+]+@[a-z0-9.]+[a-z]{2,}$");
+                    /*     Explain the following error that was seen in html code and suggest a fix if possible: Use a regular expression literal instead of the 'RegExp' constructor. sonarlint (javascript:S6325)  sonarlint me lo quiere sustituir por esto -> let validate = /[a-z0-9._%+]+@[a-z0-9.]+[a-z]{2,}$/;*/
+            
                 /*  console.log(validate.test(myEmail)); */
 
                 const dominio = myEmail.split("@")[1];  // split me crea un array con dos elementos, 1 texto y 2 el dominio.
